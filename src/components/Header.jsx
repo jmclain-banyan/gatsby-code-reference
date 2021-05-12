@@ -1,17 +1,31 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import styled from 'styled-components'
-import { FaBars } from 'react-icons/fa'
+import styled from "styled-components"
+import { FaBars } from "react-icons/fa"
+
+import { menuData } from "../data/MenuData"
+import { Button } from "./Button"
 
 const Header = () => {
   return (
     <Nav>
-      <NavLink to='/'>Explorix</NavLink>
+      <NavLink to="/">Explorix</NavLink>
       <Bars />
+      <NavMenu>
+        {menuData.map((item, idx) => (
+          <NavLink to={item.link} key={idx}>
+            {item.title}
+          </NavLink>
+        ))}
+      </NavMenu>
+      <NavBtn>
+        <Button primary={true} round={true} to="/trips">
+          Book a Flight
+        </Button>
+      </NavBtn>
     </Nav>
   )
 }
-
 
 export default Header
 
@@ -48,4 +62,23 @@ const Bars = styled(FaBars)`
     font-size: 1.8rem;
     cursor: pointer;
   }
-` 
+`
+const NavMenu = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: -48px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`
+
+const NavBtn = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`
