@@ -1,0 +1,26 @@
+[
+    {
+        "img": "../assets/images/travel-1.jpg",
+        "alt": "Guatama Buddha",
+        "name": "Guatama Buddha",
+        "button": "View Destination"
+    },
+    {
+        "img": "../assets/images/travel-2.jpg",
+        "alt": "The Great Wall",
+        "name": "The Great Wall",
+        "button": "View Destination"
+    },
+    {
+        "img": "../assets/images/travel-3.jpg",
+        "alt": "Taj Mahal",
+        "name": "Taj Mahal",
+        "button": "View Destination"
+    },
+    {
+        "img": "../assets/images/travel-4.jpg",
+        "alt": "Machu Picchu",
+        "name": "Machu Picchu",
+        "button": "View Destination"
+    }
+]
